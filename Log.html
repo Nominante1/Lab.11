@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <meta decription="Здесь можно зарегистироваться">
+    <meta keywords="Регистрация, логин, пароль">
+    <link rel="icon" href="images/logo1.jpg" type="image/png">
+    <link rel="stylesheet" href="styles/logpage.css">
+    <link rel="stylesheet" href="styles/header&navbar.css">
+    <link rel="stylesheet" href="styles/footer.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="drop">
+            <button class="navbtn">&#9776</button> <!--код кнопки бургера-->
+            <div class="navlist">
+                <a href="Main.html">Блог</a>
+                <a href="Delivery.html">Доставка</a>
+                <a href="Rewievs.html">Отзывы</a>
+                <a href="Contacts.html">Связь</a>
+                <a href="Log.html">Войти</a>
+            </div>    
+        </div>
+        <img src="images/logo1.jpg" width="65" height="65"> 
+    </div>
+
+    <div class="logpage">
+        <div class="sign">
+            <div>
+                У вас есть аккаунт?
+            </div>
+            <div>
+                <input type="radio" name="registered" checked>
+                <label for="registered">Да</label>
+                <input type="radio" name="registered">
+                <label for="noregistred">Зарегистироваться</label>
+            </div>
+        </div>
+        <div class="login">
+            <form>
+                <div>Введите ваш логин:</div>
+                <div>
+                    <input type="text" name="login" placeholder="Ваш логин" style="padding:10px; border-radius:10px">
+                </div>
+                <div>Введите ваш пароль:</div>
+                <div>
+                    <input type="text" name="login" placeholder="Ваш пароль" style="padding:10px; border-radius:10px">
+                </div>
+                <div class="sendform" style="margin-top: 1em;">
+                    <input type="submit" class="send">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="title1">Магазин кофи</div>
+         <ul class="menu">
+            <li><a href="Main.html">Блог</a></li>
+            <li><a href="Delivery.html">Доставка</a></li>
+            <li><a href="Rewievs.html">Отзывы</a></li>
+            <li><a href="Contacts.html">Связь</a></li>
+        </ul> 
+        <div class="myvk">
+            <img src="images/vk.png" width="20" height="20" alt="Логотип ВК">
+            <a href="https://vk.com/ivandavv" target="_blank">Написать мне в вк</a>
+        </div>
+    </footer>
+</body>
+</html>
