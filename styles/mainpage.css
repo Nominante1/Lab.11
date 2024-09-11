@@ -1,0 +1,175 @@
+/*Стилизация хедера*/
+body
+{
+    margin: 0;
+    background-color: bisque;
+}
+
+.row
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    /*flex-grow: 1;/*расстягивание элементов вдоль оси*/
+    background-color: bisque;
+    /*align-items: center;*/
+}
+
+h1, h2, h3
+{
+    display:block;
+}
+
+
+.obj1, .obj2, .obj3
+{
+    display: flex;
+    flex-direction: column; /*элементы в колонну*/
+    background-color: burlywood;
+    padding-left: 1em;
+    border: 2px solid black;
+}
+@media(max-width: 866px)
+{
+    .obj1, .obj2, .obj3
+    {
+        width:100%;
+    }
+}
+/*Галерея*/
+.gallery /*плашки слайда*/
+{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    height: 35em;
+    margin: 5em auto 0;
+    position: relative;
+    width: 60em;
+    margin-bottom: 5em;
+}
+.slider 
+{
+	background-color:#ddd;
+	height: inherit;
+	overflow: hidden;
+	position: relative;
+	width: inherit;
+	box-shadow: 0 0 1rem rgba(0, 0, 0, .5);/*тень*/
+    
+}
+.gallery > input/*убрать стандартные стили флажков*/
+{
+    display: none;
+}
+.slides 
+{
+	height: inherit;/*размер как плашка галереи*/
+	position: absolute;
+	width: inherit;
+    z-index:0;
+    transform: scale(1.5);
+    transition: tranform ease-in-out .5s, opacity ease-in-out .5s;
+    
+}
+.slide1
+{
+    background-image: url('../images/coffee-beans\ \(1\).jpg');
+}
+.slide2
+{
+    background-image: url("../images/coffee-beans\ \(2\).jpg");
+}
+.slide3
+{
+    background-image: url("../images/coffee-beans\ \(3\).jpg");
+}
+.slide4
+{
+    background-image: url("../images/coffee-beans\ \(4\).jpg");
+}
+
+.gallery .controls
+{
+    left: 50%;
+    margin-left: -4rem;
+    position: absolute;
+}
+.gallery label/*стилизация точки на  переключателе*/
+{
+    cursor: pointer;
+    display: inline-block;
+    height: 0.55rem;
+    margin: 1rem 0.5rem 0 0.5rem;
+    position: relative;
+    width: 0.5rem;
+    border-radius: 50%;
+    background-color: red;/*цвет неактивного флажка*/
+    transition: background ease-in-out .5s; /*начало и конец анимации медленные*/
+}
+.gallery label:after
+{
+    border: 0.15rem solid black;
+    content: " ";
+    display: block;
+    height: 0.75rem;
+    left: -0.25rem;
+    position:absolute;
+    top: -0.25rem;
+    width: 0.75rem;
+    border-radius: 50%;
+}
+.gallery label:hover,/* "~" для указания родственных элементов(находятся рядом и с одним родителем*/
+#slide1:checked ~ .controls label:nth-of-type(1),/*nth-of-type - добавление стиля к порядковому номеру элемента селектора*/
+#slide2:checked ~ .controls label:nth-of-type(2),
+#slide3:checked ~ .controls label:nth-of-type(3),
+#slide4:checked ~ .controls label:nth-of-type(4)
+{
+    background: blue;/*цвет флажка*/
+}
+
+#slide1:checked ~ .slider > .slide1,
+#slide2:checked ~ .slider > .slide2,
+#slide3:checked ~ .slider > .slide3,
+#slide4:checked ~ .slider > .slide4
+{
+    opacity: 1;/*прозрачность*/
+    z-index: 1; /*положение по оси z(в глубину)*/
+    transform: scale(1); /*изменение масштаба на 100%*/
+}
+@media(max-width: 959px)
+{
+    .gallery
+    {
+        height: 17em;
+        width: 30em;
+    }
+}
+@media(max-width: 480px)
+{
+    .gallery
+    {
+        height: 8em;
+        width: 15em;
+    }
+    .title1
+    {
+        margin-bottom: 1em;
+    }
+}
+@media(min-width: 2000px)
+{
+    h1, h2, h3
+    {
+        font-size: 2.5em;
+    }
+}
+.back-to-top /*стиль для кнопки*/
+{
+    position: fixed;
+    right: 70px;
+    bottom:80px;
+    backdrop-filter: blur(5px);
+    z-index: 2;
+}
+
