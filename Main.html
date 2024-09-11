@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta decription="Сайт магазина по продаже кофииии">
+    <meta keywords="Кофе, Магнитогорск, Купить">
+    <link rel="icon" href="images/logo1.jpg" type="image/png">
+    <link rel="stylesheet" href="styles/mainpage.css">
+    <link rel="stylesheet" href="styles/header&navbar.css">
+    <link rel="stylesheet" href="styles/footer.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="drop">
+            <button class="navbtn">&#9776</button> <!--код кнопки бургера-->
+            <div class="navlist">
+                <a href="Main.html">Блог</a>
+                <a href="Catalogue.html">Каталог</a>
+                <a href="Delivery.html">Доставка</a>
+                <a href="Rewievs.html">Отзывы</a>
+                <a href="Contacts.html">Связь</a>
+                <a href="Log.html">Войти</a>
+            </div>    
+        </div>
+        <img src="images/logo1.jpg" width="65" height="65"> 
+    </div>
+    <div class="mainpage">
+        <div class="row">
+            <div class="obj1">
+                <div>
+                    <h3>Сорт недели №1</h3>
+                </div>
+                <div>
+                    <h2>"Tarantella Napolitana"</h2>
+                </div>
+                <div style="display: flex; justify-content: center;">
+                    <div> 
+                        <h2 style="text-decoration: line-through;">910&#8381</h2><!--зачёркнутые 910 рублей-->
+                    <h1 style="margin-top: 0px; padding-top: 0px;">800&#8381</h1>
+                    </div>
+                    <div>
+                        <img src="images/Tarantella_napolitana.jpg" alt="Тарантелла Наполитана" width="160" height="130" style="padding-left: 10px;">
+                    </div>
+                </div>
+            </div>
+            <div class="obj2">
+                <div>
+                    <h3>Сорт недели №2</h3>
+                 </div>
+                <div>
+                    <h2>"Русский холодильничек"</h2>
+                </div>
+                <div style="display: flex; justify-content: center;">
+                    <div> 
+                        <h2 style="text-decoration: line-through;">1000&#8381</h2><!--зачёркнутые 910 рублей-->
+                        <h1 style="margin-top: 0px; padding-top: 0px;">1200&#8381</h1>
+                    </div>
+                    <img src="images/Tarantella_napolitana.jpg" alt="Тарантелла Наполитана" width="160" height="130" style="padding-left: 10px; padding-right: 15px;">
+                </div>
+            </div>
+            <div class="obj3">
+                <div>
+                    <h3>Сорт недели №3</h3>
+                </div>
+                <div>
+                    <h2>"Эквоториальная жара"</h2>
+                </div>
+                <div style="display: flex; justify-content: center;">
+                    <div> 
+                        <h2 style="text-decoration: line-through;">3000&#8381</h2><!--зачёркнутые 910 рублей-->
+                        <h1 style="margin-top: 0px; padding-top: 0px;">200&#8381</h1>
+                    </div>
+                    <div>
+                        <img src="images/Tarantella_napolitana.jpg" alt="Тарантелла Наполитана" width="160" height="130" style="padding-left: 10px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gallery">
+            <input type="radio" name="point" id="slide1" checked>
+            <input type="radio" name="point" id="slide2">
+            <input type="radio" name="point" id="slide3">
+            <input type="radio" name="point" id="slide4">
+            <div class="slider">
+                <div class="slides slide1"></div>
+                <div class="slides slide2"></div>
+                <div class="slides slide3"></div>
+                <div class="slides slide4"></div>
+            </div>
+            <div class="controls">
+                <label for="slide1"></label>
+                <label for="slide2"></label>
+                <label for="slide3"></label>
+                <label for="slide4"></label>
+            </div>
+        </div>
+    </div>
+    <a href="#top" class="back-to-top"><img src="images/up_arrow.png" alt="Стрелка вверх"></a>
+    <footer>
+        <div class="title1">Магазин кофи</div>
+         <ul class="menu">
+            <li><a href="Main.html">Блог</a></li>
+            <li><a href="Delivery.html">Доставка</a></li>
+            <li><a href="Rewievs.html">Отзывы</a></li>
+            <li><a href="Contacts.html">Связь</a></li>
+        </ul> 
+        <div class="myvk">
+            <img src="images/vk.png" width="20" height="20" alt="Логотип ВК">
+            <a href="https://vk.com/ivandavv" target="_blank">Написать мне в вк</a>
+        </div>
+    </footer>
+</body>
+</html>
