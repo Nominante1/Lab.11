@@ -1,0 +1,131 @@
+body
+{
+    margin: 0;
+    background-color: bisque;
+}
+.rewpage
+{
+    margin-left: 1em;
+}
+.rewievs
+{
+    display: flex;
+}
+.rewiev
+{
+    display:flex;
+}
+.mainrew
+{
+    display: flex;
+/*    */
+}
+.stars
+{
+    display: flex;
+    margin-bottom: 2.7em;
+}
+.name
+{
+    text-align: center;
+    font-size: 1.7em;
+}
+.photo
+{
+    text-align: center;
+}
+.accounts
+{
+    display:flex;
+    flex-direction: column;
+}
+.comment
+{
+    margin-bottom: 3em;
+    margin-left: 2em;
+    border: 2px dotted black;
+}
+@media(max-width: 860px)
+{
+    .comments
+    {
+        display: none;
+    }
+}
+@media(max-width: 620px)
+{
+    .stars object
+    {
+        width:5em;
+        height:5em;
+    }
+    .photo img
+    {
+        width: 5.5em;
+        height: 5.5em
+    }
+}
+@media(max-width: 519px)
+{
+    .stars object
+    {
+        width:2em;
+        height:2em;
+    }
+    .photo img
+    {
+        width: 2em;
+        height: 2em
+    }
+}
+@media(min-width: 1600px)
+{
+    .info
+    {
+        font-size: 2em;
+    }
+}
+@media(min-width: 1800px)
+{
+    .comment
+    {
+        font-size:1.5em;
+    }
+    .stars object
+    {
+        width: 11em;
+        height: 11em;
+    }
+    .photo img
+    {
+        width: 11em;
+        height: 11em
+    }
+}
+@media(min-width: 2100px)
+{
+    .rewievs
+    {
+        margin-bottom: 2em;
+    }
+    .navbar
+    {
+        font-size: 2em;
+    }
+    .navbar img
+    {
+        width: 4em;
+        height: 4em;
+    }
+}
+@media(min-width: 2350px)
+{
+    .info
+    {
+        font-size: 3em;
+    }
+    .comments
+    {
+        margin-top: 1em;
+    }
+}

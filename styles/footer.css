@@ -1,0 +1,74 @@
+footer
+{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    align-items:center;
+    width: 100%;
+    background-color: grey;
+}
+.title1
+{
+    font-size: 30px;
+    background: linear-gradient(to right, red, blue);
+    background-clip: text;/*определяется, что фон текста будет повторять текст*/
+    color: transparent;/*цвет текста меняется на прозрачный*/
+    display: inline-block;
+    text-transform: uppercase;
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+.menu
+{
+    display: block;
+    list-style:none;
+    text-transform: uppercase;
+
+}
+ul
+{
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+li
+{
+    display: inline; /* Отображать как строчный элемент */
+    padding: 2px; /* Поля вокруг текста */
+}
+.menu a, .myvk a
+{
+    text-decoration: none;
+    color: white;
+    font-family:"Docker";
+}
+
+@font-face
+{
+    font-family: "Docker";
+    font-style: normal;
+    font-weight: normal;
+    src: url("../fonts/ofont.ru_Docker.ttf")format("truetype");
+}
+
+/*@media(min-width: 2000px)
+{
+    footer
+    {
+        position:fixed;
+        bottom:0;
+    }
+    .menu a, .myvk a
+    {
+        font-size: 1.5em;
+    }
+}*/
+/*
+@media(min-height: 1200px)
+{
+    footer
+    {
+        position:fixed;
+        bottom: 0;
+    }
+}
+*/

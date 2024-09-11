@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Связь</title>
+    <meta decription="Сайт магазина по продаже кофииии">
+    <meta keywords="Кофе, Магнитогорск, Купить">
+    <link rel="icon" href="images/logo1.jpg" type="image/png">
+    <link rel="stylesheet" href="styles/contpage.css">
+    <link rel="stylesheet" href="styles/header&navbar.css">
+    <link rel="stylesheet" href="styles/footer.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="drop">
+            <button class="navbtn">&#9776</button> <!--код кнопки бургера-->
+            <div class="navlist">
+                <a href="Main.html">Блог</a>
+                <a href="Delivery.html">Доставка</a>
+                <a href="Rewievs.html">Отзывы</a>
+                <a href="Contacts.html">Связь</a>
+                <a href="Log.html">Войти</a>
+            </div>    
+        </div>
+        <img src="images/logo1.jpg" width="65" height="65"> 
+    </div>
+
+    <h1 id="company">Магазин кофииии</h1>
+    <h2 style="margin-left: 1.5em;">Напишите нам!</h2>
+    <form>
+        <div class="main-info">
+            <div>
+                <div class="name1">
+                    <p>Имя:</p><br>
+                    <input type="text" name="firstname" placeholder="Ваше имя" style="padding:10px; border-radius:10px"><br><!--Ширина поля и внешние границы-->
+                </div>
+                <div class="email1">
+                    <p style="margin-top:1em;">Почтовый ящик:</p><br>
+                    <input type="email" name="pochta" placeholder="Адрес вашего емейла" style="padding:10px; border-radius:10px"><br>
+                </div>
+                <div class="tel1">
+                    <p style="margin-top:1em;">Телефон:</p><br>
+                    <input type="tel" name="telebater" placeholder="Ваш телефон, начинающийся с +7" pattern="\+7[0-9]{10}" style="padding:10px; border-radius:10px"><br>
+                </div>
+            </div>
+            <div>
+                <div class="gender1">
+                    <p style="margin-top:1em;">Как к вам обращаться?<br>
+                        <input type="radio" name="gender">Уважаемый<br>
+                        <input type="radio" name="gender">Уважаемая<br>
+                    </p>
+                </div>
+                <div class="topic1">
+                    <p style="margin-top: 1em">Какова тематика вашего обращения?
+                        <select name="Topic">
+                            <option value="1">Жалоба</option>
+                            <option value="2">Претензия</option>
+                            <option value="3">Предложения</option>
+                            <option value="4">Дружба</option>
+                            <option value="5">Совместный проект</option> 
+                        </select>
+                    </p>
+                </div>
+            </div>
+            <div  style="margin-right: 1em; margin-top:1em;">
+                <textarea placeholder="Введите здесь ваше сообщение" style="border-radius:10px"></textarea><br>
+                <input type="file"><br>
+                <input type="checkbox" style="margin-top: 1em;"><p class="agree">Я согласен на обработку моих персональных данных</p>
+            </div>
+            
+        </div>
+        <div>
+            <input type="submit" class="send">
+        </div>
+    </form><br>
+
+    <footer>
+        <div class="title1">Магазин кофи</div>
+         <ul class="menu">
+            <li><a href="Main.html">Блог</a></li>
+            <li><a href="Delivery.html">Доставка</a></li>
+            <li><a href="Rewievs.html">Отзывы</a></li>
+            <li><a href="Contacts.html">Связь</a></li>
+        </ul> 
+        <div class="myvk">
+            <img src="images/vk.png" width="20" height="20" alt="Логотип ВК">
+            <a href="https://vk.com/ivandavv" target="_blank">Написать мне в вк</a>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог</title>
+    <link rel="stylesheet" href="styles/cat.css">
+    <link rel="stylesheet" href="styles/header&navbar.css">
+    <link rel="stylesheet" href="styles/footer.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="drop">
+            <button class="navbtn">&#9776</button> <!--код кнопки бургера-->
+            <div class="navlist">
+                <a href="Main.html">Блог</a>
+                <a href="Catalogue.html">Каталог</a>
+                <a href="Delivery.html">Доставка</a>
+                <a href="Rewievs.html">Отзывы</a>
+                <a href="Contacts.html">Связь</a>
+                <a href="Log.html">Войти</a>
+            </div>    
+        </div>
+        <img id="logo" src="images/logo1.jpg" width="65" height="65"> 
+    </div>
+    <div class="main">
+        <div class="filter">
+            <section id="filters">
+                <select id="type">
+                    <option value="alltypes">Все</option>
+                    <option value="instant">Растворимый</option>
+                    <option value="ground">Молотый</option>
+                    <option value="beans">Зерновой</option>
+                </select>
+                <select id="volume" onchange="getVolume(this.value)">
+                    <option value="allvols">Все</option>
+                    <option value="verysmall">Менее 100 грамм</option>
+                    <option value="small">От 100 до 200 грамм</option>
+                    <option value="medium">От 200 до 400 грамм</option>
+                    <option value="big">От 400 грамм и более</option>
+                </select>
+                <button class="filterit" onclick="getType()">Применить фильтры</button>
+            </section>
+        </div>
+        <div class="cat">
+            <section class="products">
+                <div class="alltypes allvols product instant small">
+                    <div>
+                        <h2 id="fcof">Tarantella Napolitana</h2>
+                        <p>Тип: растворимый</p>
+                        <p>Объем: 100г</p>
+                        <p id="fvolskl">На складе: 100г</p>
+                        <button onclick="showCount(1)">Добавить в корзину</button>
+                    </div>
+                    <div class="AddToBasket" id="firstprod">
+                        <input id="fvol" type="number" placeholder="Введите нужный объём">
+                        <button onclick="moveToBas(document.getElementById('fvol'), document.getElementById('fcof'), document.getElementById('fvolskl'))">Подтвердить</button>
+                    </div>
+                </div>
+                <div class="alltypes allvols product ground medium">
+                    <div>
+                        <h2 id="scof">Русский холодильничек</h2>
+                        <p>Тип: молотый</p>
+                        <p>Объем: 250г</p>
+                        <p id="svolskl">На складе: 500г</p>
+                        <button onclick="showCount(2)">Добавить в корзину</button>
+                    </div>
+                    <div class="AddToBasket" id="secondprod">
+                        <input id="svol" type="number" placeholder="Введите нужный объём">
+                        <button onclick="moveToBas(document.getElementById('svol'), document.getElementById('scof'), document.getElementById('svolskl'))">Подтвердить</button>
+                    </div>
+                </div>
+                <div class="alltypes allvols product beans big">
+                    <div>
+                        <h2 id="tcof">Банановая радость</h2>
+                        <p>Тип: зерновой</p>
+                        <p>Объем: 500г</p>
+                        <p id="tvolskl">На складе: 10000г</p>
+                        <button onclick="showCount(3)">Добавить в корзину</button>
+                    </div>
+                    <div class="AddToBasket" id="thirdprod">
+                        <input id="tvol" type="number" placeholder="Введите нужный объём">
+                        <button onclick="moveToBas(document.getElementById('tvol'), document.getElementById('tcof'), document.getElementById('tvolskl'))">Подтвердить</button>
+                    </div>
+                </div>
+                <div class="alltypes allvols product instant medium">
+                    <div>
+                        <h2 id="focof">Злодей-британец</h2>
+                        <p>Тип: растворимый</p>
+                        <p>Объем:200г</p>
+                        <p id="fovolskl">На складе: 4000г</p>
+                        <button onclick="showCount(4)">Добавить в корзину</button>
+                    </div>
+                    <div class="AddToBasket" id="fourthprod">
+                        <input id="fovol" type="number" placeholder="Введите нужный объём">
+                        <button onclick="moveToBas(document.getElementById('fovol'), document.getElementById('focof'), document.getElementById('fovolskl'))">Подтвердить</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="basket">
+        <h1>В вашей корзине: </h1>
+        <div id="cof"></div>
+    </div>
+    <form id="orderForm">
+        <input id="name" type="text" placeholder="Ваше имя" required>
+        <input id="adress" type="text" placeholder="Адрес доставки" required>
+        <button type="button" onclick="submitOrder()">Заказать</button>
+    </form>
+    <div>
+        <div class="delivr"> Заказ оформлен! </div>
+            <img id="truck" src="./images/delivery_svg.svg" width="300px" height="200px">
+        </div>
+
+
+    <footer>
+        <div class="title1">Магазин кофи</div>
+        <ul class="menu">
+            <li><a href="Main.html">Блог</a></li>
+            <li><a href="Delivery.html">Доставка</a></li>
+            <li><a href="Rewievs.html">Отзывы</a></li>
+            <li><a href="Contacts.html">Связь</a></li>
+        </ul> 
+        <div class="myvk">
+            <img src="images/vk.png" width="20" height="20" alt="Логотип ВК">
+            <a href="https://vk.com/ivandavv" target="_blank">Написать мне в вк</a>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

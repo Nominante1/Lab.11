@@ -1,0 +1,71 @@
+.navbar
+{
+    display:flex;
+    background-color:  cornflowerblue;
+    align-items: center;
+}
+.navlist
+{
+    display: flex;
+}
+.navlist a
+{
+    display: block;
+    padding: 1em;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: .27em;
+    font-size:1.28em;
+}
+.navlist a:hover /*изменение стиля, пока наведён курсор*/
+{
+    background: linear-gradient(to right top, red, blue); /*градиент*/
+}
+
+.navbtn
+{
+    display: none;
+}
+
+@media(max-width: 1000px)
+{
+    .navbtn
+    {
+        display: block;
+        font-size: 2em;/*Увеличение бургера вдвое*/
+        padding-inline: 10px;
+        padding-bottom: 3px;
+        border: none;
+        background-color: cornflowerblue;
+        color: white;
+        cursor: pointer;
+    }
+    .navlist
+    {
+        display: none;
+    }
+    .drop:hover .navlist
+    {
+        display:block;
+        position: absolute;
+        background-color: cornflowerblue;
+    }
+    .navbar
+    {
+        justify-content: space-between;
+    }
+}
+
+@media(min-width: 2000px)
+{
+    .navlist
+    {
+        font-size: 2em;
+    }
+    #logo
+    {
+        width: 129px;
+        height: 129px;
+    }
+}
